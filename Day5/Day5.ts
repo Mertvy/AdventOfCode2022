@@ -12,17 +12,13 @@ class Stack<T> {
     pop(): T | undefined {
       return this.items.pop();
     }
-  
-    peek(): T | undefined {
-      return this.items[this.items.length - 1];
-    }
-  
+
     isEmpty(): boolean {
       return this.items.length === 0;
     }
-  
-    size(): number {
-      return this.items.length;
+
+    reverse(): void {
+        this.items.reverse();
     }
 }
 
@@ -37,32 +33,21 @@ function generateStackArray(input: string) {
             if (stackArray[index] == null) {
                 stackArray[index] = new Stack();
             }
-
             if (line.charAt(i+1) != " ") {
                 stackArray[index].push(line.charAt(i+1));
             }
-
             index++;
         }
     });
 
-
     for (let i = 1; i < stackArray.length; i++) {
-        let stack = stackArray[i];
-
-        let tempStack:Stack<string> = new Stack();
-        while (!stack.isEmpty()) {
-            tempStack.push(stack.pop()!);
-        }
-        stackArray[i] = tempStack;
+        stackArray[i].reverse();
     }
 
     return stackArray;
 }
 
 let stackArr: Array<Stack<string>> = generateStackArray(input);
-
-
 
 const Part1 = () => {
     let instructions = input.split("\n\n")[1];
