@@ -34,11 +34,8 @@ function getStartOfMessage(markerLength:number):number {
         if (letterFrequency[removeLetterIndex] == 0) {
             uniqueLetters--;
         }
-
     }
-
     return -1;
-
 }
 
 const part1 = () => {
