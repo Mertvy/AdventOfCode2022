@@ -1,5 +1,4 @@
 import * as fs from 'fs';
-import { fileURLToPath } from 'url';
 
 let input: string = fs.readFileSync("./Day7/input.txt", 'utf-8');
 
