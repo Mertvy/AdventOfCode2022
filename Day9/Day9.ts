@@ -58,7 +58,23 @@ class Knot {
         if (Math.abs(next.x - this.x) <= 1 && Math.abs(next.y - this.y) <= 1) {
             return;
         }
-        
+
+        if (Math.abs(next.x - this.x) > 1 && Math.abs(next.y - this.y) > 1) {
+            if (next.x > this.x) {
+                this.x = next.x - 1;
+            }
+            else {
+                this.x = next.x + 1;
+            }
+
+            if (next.y > this.y) {
+                this.y = next.y - 1;
+            }
+            else {
+                this.y = next.y + 1;
+            }
+        }
+
         if (Math.abs(next.x - this.x) > 1) {
             this.y = next.y;
             if (next.x > this.x) {
