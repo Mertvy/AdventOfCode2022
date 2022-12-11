@@ -1,6 +1,6 @@
-import * as fs from 'fs';
+import { readFileSync } from 'fs';
 
-let input: string = fs.readFileSync("./Day5/input.txt", 'utf-8');
+let input: string = readFileSync("./Day5/input.txt", 'utf-8');
 
 class Stack<T> {
     private items: T[] = [];

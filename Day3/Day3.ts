@@ -1,6 +1,6 @@
-import * as fs from 'fs';
+import { readFileSync } from 'fs';
 
-let input: string = fs.readFileSync("./Day3/input.txt", 'utf-8');
+let input: string = readFileSync("./Day3/input.txt", 'utf-8');
 
 function letterPriority(a:string) {
     let code = a.charCodeAt(0);

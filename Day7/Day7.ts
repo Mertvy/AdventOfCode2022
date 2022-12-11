@@ -1,6 +1,6 @@
-import * as fs from 'fs';
+import { readFileSync } from 'fs';
 
-let input: string = fs.readFileSync("./Day7/input.txt", 'utf-8');
+let input: string = readFileSync("./Day7/input.txt", 'utf-8');
 
 class FileSystem {
     root: FileSystemNode;

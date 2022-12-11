@@ -1,6 +1,6 @@
-import * as fs from 'fs';
+import { readFileSync } from 'fs';
 
-let input: string = fs.readFileSync("./Day1/input.txt", 'utf-8');
+let input: string = readFileSync("./Day1/input.txt", 'utf-8');
 
 const part1 = (input:string):number => {
     let maxCalories: number = 0

@@ -1,6 +1,6 @@
-import * as fs from 'fs';
+import { readFileSync } from 'fs';
 
-let input: string = fs.readFileSync("./Day10/input.txt", 'utf-8');
+let input: string = readFileSync("./Day10/input.txt", 'utf-8');
 
 const part1 = () => {
     let total = 0;
@@ -37,7 +37,7 @@ const part2 = () => {
         clockCycle++;
 
         if (Math.abs(pixel - xRegister) <= 1) {
-            image[row] += "#";
+            image[row] += "█";
         }
         else {
             image[row] += " ";

@@ -1,6 +1,6 @@
-import * as fs from 'fs';
+import { readFileSync } from 'fs';
 
-let input = fs.readFileSync("./Day2/input.txt", 'utf-8');
+let input: string = readFileSync("./Day2/input.txt", 'utf-8');
 
 const pointValues = new Map<string, number>();
 pointValues.set("rock", 1);

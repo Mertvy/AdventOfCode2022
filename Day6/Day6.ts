@@ -1,6 +1,6 @@
-import * as fs from 'fs';
+import { readFileSync } from 'fs';
 
-let input: string = fs.readFileSync("./Day6/input.txt", 'utf-8');
+let input: string = readFileSync("./Day6/input.txt", 'utf-8');
 
 function getStartOfMessage(markerLength:number):number {
 

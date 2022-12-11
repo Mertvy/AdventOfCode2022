@@ -1,6 +1,6 @@
-import * as fs from 'fs';
+import { readFileSync } from 'fs';
 
-let input: string = fs.readFileSync("./Day4/input.txt", 'utf-8');
+let input: string = readFileSync("./Day4/input.txt", 'utf-8');
 
 function isFullyContained(assignments: Array<string>): boolean {
     let e1 = assignments[0];
