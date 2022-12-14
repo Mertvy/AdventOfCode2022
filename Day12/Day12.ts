@@ -116,7 +116,7 @@ function generateNodesFromInput() {
     return [source!, possibleSources, nodeGrid];
 }
 
-function DFS(source: HeightNode) {
+function BFS(source: HeightNode) {
     const queue: Queue<HeightNode> = new Queue();
 
     source.visited = true;
@@ -138,14 +138,14 @@ function DFS(source: HeightNode) {
 }
 
 const part1 = () => {
-    return DFS(generateNodesFromInput()[0] as HeightNode);
+    return BFS(generateNodesFromInput()[0] as HeightNode);
 }
 
 const part2 = () => {
     const [junk, possibleSources, nodeGrid] = generateNodesFromInput();
     let shortestPath = Number.MAX_VALUE;
     (possibleSources as HeightNode[]).forEach(source => {
-        let path = DFS(source)!;
+        let path = BFS(source)!;
         if (path < shortestPath) {
             shortestPath = path;
         }
